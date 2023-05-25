@@ -1,13 +1,16 @@
-import { ProductCardPai } from "./productStyle"
+import { CardTextbox, Imagem, ProductCardPai } from "./productStyle"
 
-export function ProductCard() {
+export function ProductCard({ productlist }) {
+  console.log(productlist)
   return (
     <>
       <ProductCardPai>
-        <p>Productcard</p>
-        <p>Nome do Produto</p>
-        <p>Valor do Produto</p>
-        <button>Adicionar item</button>
+        <Imagem src={productlist.imageUrl} />
+        <CardTextbox>
+          <p>{productlist.name} </p>
+          <p>{productlist.value} </p>
+          <button>Adicionar item</button>
+        </CardTextbox>
       </ProductCardPai>
     </>
   )

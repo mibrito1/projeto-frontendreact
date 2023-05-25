@@ -2,16 +2,13 @@ import React from "react"
 import { ProductCard } from "../ProductCard/ProductCard"
 import { HomePai, ProductCardDiv, QuantidadeDiv } from "./HomeStyles"
 
-
-
-
-
-export function Home() {
+export function Home({ productlist }) {
+  console.log(productlist)
   return (
     <>
       <HomePai>
         <QuantidadeDiv>
-          <span>Quantidade de Produtos</span>
+          <span>Quantidade de Produtos: {productlist.length} </span>
           <span>
             Ordenação
             <select>
@@ -23,9 +20,9 @@ export function Home() {
 
         <ProductCardDiv>
 
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <ProductCard productlist={productlist[0]} />
+          <ProductCard productlist={productlist[1]} />
+          <ProductCard productlist={productlist[2]} />
 
         </ProductCardDiv>
 
