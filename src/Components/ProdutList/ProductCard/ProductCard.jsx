@@ -1,14 +1,14 @@
 import { CardTextbox, Imagem, ProductCardPai } from "./productStyle"
 
-export function ProductCard({ productlist }) {
-  console.log(productlist)
+export function ProductCard({ produto }) {
+  console.log(produto)
   return (
     <>
       <ProductCardPai>
-        <Imagem src={productlist.imageUrl} />
+        <Imagem src={produto.imageUrl} />
         <CardTextbox>
-          <p>{productlist.name} </p>
-          <p>{productlist.value} </p>
+          <p>{produto.name} </p>
+          <p>{produto.value} </p>
           <button>Adicionar item</button>
         </CardTextbox>
       </ProductCardPai>
