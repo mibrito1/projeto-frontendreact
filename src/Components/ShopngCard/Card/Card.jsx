@@ -5,7 +5,12 @@ import { CardPai } from "./CardStyles";
 
 
 
-export function Card() {
+export function Card({
+  valorTotal,
+  setValorTotal,
+  carrinho,
+  setCarrinho }) {
+
   return (
     <>
       <CardPai>

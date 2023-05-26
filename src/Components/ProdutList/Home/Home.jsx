@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import { ProductCard } from "../ProductCard/ProductCard"
 import { HomePai, ProductCardDiv, QuantidadeDiv } from "./HomeStyles"
 
-export function Home({ product }) {
+export function Home({ product, valorTotal, setValorTotal, carrinho, setCarrinho }) {
+
   const [ordination, setOrdination] = useState("");
 
   function handleSelect(event) {
