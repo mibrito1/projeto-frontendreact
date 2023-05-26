@@ -1,7 +1,7 @@
 import { CardTextbox, Imagem, ProductCardPai } from "./productStyle"
 
 export function ProductCard({ produto }) {
-  console.log(produto)
+
   return (
     <>
       <ProductCardPai>
