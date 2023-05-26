@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Filtro } from "./Components/Filtro/Filtro";
 import { Home } from "./Components/ProdutList/Home/Home";
 import { Card } from "./Components/ShopngCard/Card/Card";
@@ -8,7 +9,11 @@ import { productlist } from "./assents/productList";
 
 function App() {
 
-  console.log(productlist)
+  const [cart, setCart] = useState("");
+  const [amount, setamount] = useState("");
+  const [minfilter, setMinFilter] = useState("");
+  const [maxfilter, setMaxFilter] = useState("");
+  const [searchfilter, setSearchFilter] = useState("");
 
   return (
     <>
@@ -16,7 +21,7 @@ function App() {
 
       <AppCaixa>
         <Filtro />
-        <Home productlist={productlist} />
+        <Home product={productlist} />
         <Card />
       </AppCaixa>
 

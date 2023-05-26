@@ -1,17 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import { ProductCard } from "../ProductCard/ProductCard"
 import { HomePai, ProductCardDiv, QuantidadeDiv } from "./HomeStyles"
 
-export function Home({ productlist }) {
-  console.log(productlist)
+export function Home({ product }) {
+  const [ordination, setOrdination] = useState("");
+
+  function handleSelect(event) {
+    console.log(event.target.value);
+    setOrdination(event.target.value);
+  }
+
   return (
     <>
       <HomePai>
         <QuantidadeDiv>
-          <span>Quantidade de Produtos: {productlist.length} </span>
+          <span>Quantidade de Produtos: {product.length} </span>
           <span>
-            Ordenação
-            <select>
+            Ordenação:
+            <select value={ordination} onChange={handleSelect}>
+              <option></option>
               <option>Crescente</option>
               <option>Decrescente</option>
             </select>
@@ -20,9 +27,9 @@ export function Home({ productlist }) {
 
         <ProductCardDiv>
 
-          <ProductCard productlist={productlist[0]} />
-          <ProductCard productlist={productlist[1]} />
-          <ProductCard productlist={productlist[2]} />
+          <ProductCard produto={product[0]} />
+          <ProductCard produto={product[1]} />
+          <ProductCard produto={product[2]} />
 
         </ProductCardDiv>
 
