@@ -1,6 +1,6 @@
 import { CardTextbox, Imagem, ProductCardPai } from "./productStyle"
 
-export function ProductCard({ produto }) {
+export function ProductCard({ produto, addItens }) {
 
   return (
     <>
@@ -9,7 +9,7 @@ export function ProductCard({ produto }) {
         <CardTextbox>
           <p>{produto.name} </p>
           <p>{produto.value} </p>
-          <button>Adicionar item</button>
+          <button onClick={() => addItens(produto)}>Adicionar ao carrinho</button>
         </CardTextbox>
       </ProductCardPai>
     </>
