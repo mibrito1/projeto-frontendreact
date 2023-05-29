@@ -10,8 +10,8 @@ import { ServerStyleSheet } from "styled-components";
 
 function App() {
 
-  const [cart, setCart] = useState("");
-  const [amount, setAmount] = useState("");
+  const [cart, setCart] = useState([]);
+  const [amount, setAmount] = useState(0);
   const [minfilter, setMinFilter] = useState(0); //quando digitar la no filtro vai começar no zero
   const [maxfilter, setMaxFilter] = useState(0); // esse zero nao é string
   const [searchfilter, setSearchFilter] = useState("");
